@@ -9,7 +9,7 @@ function Set-SpicePaths {
         }
     }
 
-    $configPath = "$($env:USERPROFILE)\.spicetify\config-xpui.ini"
+    $configPath = "${HOME}\.spicetify\config-xpui.ini"
 
     Write-Host ""
     Write-Host ">  Looking for config file..."
