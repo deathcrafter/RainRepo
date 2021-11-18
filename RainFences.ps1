@@ -3,11 +3,28 @@ Summary: A script to create a customizable Fence for Rainmeter.
 #>
 
 param(
+    [Parameter()]
+    [string]
     $name = 'Fences',
-    $rows = 3,
-    $columns = 5,
-    $folder = [Environment]::GetFolderPath('Desktop'),
+
+    [Parameter()]
+    [string]
     $title = 'MyFence',
+
+    [Parameter()]
+    [int]
+    $rows = 3,
+
+    [Parameter()]
+    [int]
+    $columns = 4,
+
+    [Parameter()]
+    [string]
+    $folder = [Environment]::GetFolderPath('Desktop'),
+
+    [Parameter()]
+    [string]
     $skinsfolder = "$([System.Environment]::GetFolderPath('MyDocuments'))\Rainmeter\Skins"
 )
 
