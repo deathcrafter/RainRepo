@@ -278,8 +278,8 @@ New-Item -Path "$skinsfolder\$name\@Resources" -Name Icons -ItemType Directory |
 $finalSkin | Out-File -FilePath "$skinsfolder\$name\$name.ini" -Encoding unicode
 
 try {
-    $process = (Get-Process Rainmeter).Path -ErrorAction SilentlyContinue
-    Start-Process $process -ArgumentList '[!RefreshApp]' -ErrorAction SilentlyContinue
+    $process = (Get-Process Rainmeter).Path -ErrorAction Stop
+    Start-Process $process -ArgumentList '[!RefreshApp]' -ErrorAction Stop
     Start-Sleep -Milliseconds 200
     Start-Process $process -ArgumentList "$('[!ActivateConfig "' + $name + '"]')" -ErrorAction SilentlyContinue
 } catch {}
