@@ -66,6 +66,9 @@ Update = 1000
 AccurateText = 1
 OnRefreshAction=[!UpdateMeasure *][!UpdateMeter *][!Update]
 
+ContextTitle = "Open Fence Folder"
+ContextAction = ["#FenceFolder#"]
+
 [Metadata]
 Name = {name}
 Author = death.crafter
